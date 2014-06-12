@@ -4,19 +4,22 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+options(warn=0)
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
-  set <- function(y) {
-    x <<- y
-    m <<- NULL
+  print(c(length(x),class(x)))
+  if(isMatrix(x)){
+    set <- function(y) {
+      x <<- y
+      m <<- NULL
+    }
+    get <- function() x
+    setinverse <- function(inverse) m <<- inverse
+    getinverse <- function() m
+    list(set = set, get = get,
+         setinverse = setinverse,
+         getinverse = getinverse)    
   }
-  get <- function() x
-  setinverse <- function(inverse) m <<- inverse
-  getinverse <- function() m
-  list(set = set, get = get,
-       setinverse = setinverse,
-       getinverse = getinverse)
 }
 
 
@@ -30,14 +33,9 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
-  print(class(data))
-  test <- data
-  if(isMatrix(test)){
-    m <- solve(data, ...)
-    x$setinverse(m)
-    m
-    print(class(x))
-  } 
+  m <- solve(data, ...)
+  x$setinverse(m)
+  m
 }
 
 isMatrix <- function(a=matrix(), ...){
