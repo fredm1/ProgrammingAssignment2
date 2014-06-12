@@ -1,5 +1,5 @@
 #Test pushing to github
-#Master
+#Update Master
 ## Put comments here that give an overall description of what your
 ## functions do
 
