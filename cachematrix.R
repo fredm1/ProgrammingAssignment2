@@ -1,7 +1,13 @@
-#Test pushing to github
-#Test
-## Put comments here that give an overall description of what your
-## functions do
+## The purpose of this program is to cache the inverse of a Matrix. The matrix inversion tends to be a 
+## expensive computation for this reason it's good ideal to cache the value. The makeCacheMatrix function is 
+##used to create a special matrix object that is used to cache the inverse. The cacheSolve function is used to
+##calculate the inverse of the matrix created by makeCacheMatrix. The last function cacheSolve was added
+## to verify that the following:
+## 1. The object set in makeCacheMatrix is a valid matrix
+## 2. The matrix defined is a square matrix
+## 3. The inverse exists for the matrix by using the det() function
+## if any of the three test conditions fail the makeCacheMatrix function will not create the 
+## special matrix object.
 
 ## Write a short comment describing this function
 options(warn=0)
@@ -23,7 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The function cacheSolve is used to calucate the inverse of the special matrix created in 
+## makeCacheMatrix for the first time. If the special matrix does not change the function will
+## return the inversed cached value 
 
 cacheSolve <- function(x, ...) {
   
@@ -38,6 +46,15 @@ cacheSolve <- function(x, ...) {
   m
 }
 
+## The isMatrix is used to determine the matrix defined in makeCacheMatrix is a valid matrix.
+## The following conditions will be tested:
+##
+## 1. Verify the specail matrix objected created in makeCacheMatrix is of class matrix
+## 2. Verify the martrix is square matrix
+## 3. Verify the matrix has a inverase matrix by check the det() is not equal to zero
+##
+##if any of the three test conditions fail the makeCacheMatrix function will not create the 
+## special matrix object.
 isMatrix <- function(a=matrix(), ...){
   #Verify the object is of type matrix
   if (class(a) == "matrix") {
