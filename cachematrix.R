@@ -6,7 +6,7 @@
 ## 1. The object set in makeCacheMatrix is a valid matrix
 ## 2. The matrix defined is a square matrix
 ## 3. The inverse exists for the matrix by using the det() function
-## if any of the three test conditions fail the makeCacheMatrix function will not create the 
+## if any of the three tests conditions fail the makeCacheMatrix function will not create the 
 ## special matrix object.
 
 ## Write a short comment describing this function
@@ -53,7 +53,7 @@ cacheSolve <- function(x, ...) {
 ## 2. Verify the martrix is square matrix
 ## 3. Verify the matrix has a inverase matrix by check the det() is not equal to zero
 ##
-##if any of the three test conditions fail the makeCacheMatrix function will not create the 
+##if any of the three tests conditions fail the makeCacheMatrix function will not create the 
 ## special matrix object.
 isMatrix <- function(a=matrix(), ...){
   #Verify the object is of type matrix
