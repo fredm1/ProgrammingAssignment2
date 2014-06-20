@@ -1,6 +1,12 @@
+## The following is the unit test results for 4 test case scenarios:
+## 1. A valid square matrix with an inverse matrix
+## 2. Not a valid matrix object
+## 3. Not a square matrix
+## 4. A valid square matrix without an inverse matrix
+
 > source('~/Documents/Coursera/R_Programming/Week3/Programming_Assignment2/cachematrix.R')
 
-## Test case a valid square matrix which has an inverse
+## Test case 1: a valid square matrix which has an inverse
 > matrix <- matrix(c(2,3,1,6),nrow=2,ncol=2)
 > specialMatrixObject <- makeCacheMatrix(matrix)
 [1] "4"      "matrix"
