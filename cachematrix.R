@@ -1,5 +1,5 @@
 ## The purpose of this program is to cache the inverse of a Matrix. The matrix inversion tends to be a 
-## expensive computation for this reason it's good ideal to cache the value. The makeCacheMatrix function is 
+## expensive computation for this reason it's a good ideal to cache the value. The makeCacheMatrix function is 
 ##used to create a special matrix object that is used to cache the inverse. The cacheSolve function is used to
 ##calculate the inverse of the matrix created by makeCacheMatrix. The last function cacheSolve was added
 ## to verify that the following:
@@ -9,7 +9,12 @@
 ## if any of the three tests conditions fail the makeCacheMatrix function will not create the 
 ## special matrix object.
 
-## Write a short comment describing this function
+## The makeCacheMatrix is used to create the special matrix object that caches the inverse matrix. The special matrix object is really a list that contains 4 functions and stores the given
+## matrix.
+## 1. First function will set the matrix
+## 2. Second function will return the matrix
+## 3. Third function will set the inverse matrix
+## 4. Fourth function will return the inverse matrix
 options(warn=0)
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
