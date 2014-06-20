@@ -1,3 +1,4 @@
+## See UnitTest_cachematrix_Assigment2 for unit test of cachematrix.R in github.
 ## The purpose of this program is to cache the inverse of a Matrix. The matrix inversion tends to be a 
 ## expensive computation for this reason it's a good ideal to cache the value. The makeCacheMatrix function is 
 ##used to create a special matrix object that is used to cache the inverse. The cacheSolve function is used to
@@ -15,7 +16,7 @@
 ## 2. Second function will return the matrix
 ## 3. Third function will set the inverse matrix
 ## 4. Fourth function will return the inverse matrix
-options(warn=0)
+options(warn=1)
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   print(c(length(x),class(x)))
